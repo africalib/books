@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="post book">
+    <div class="top">
+        {% assign coverUrl = "" %}
+        {% assign pages = site.pages %}
+        {% for node in pages %}
+        {% if node.title != null %}
+        {% assign book = page.categories | array_to_sentence_string %}
+        {% if node.title == book %}
+        {% assign coverUrl = site.baseurl | append: node.url %}
+        <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }} - {{ node.description }}</a>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="line"></div>
+    <div class="row">
+        <div class="col-lg-9 left">
+            <article>
+                <div class="title">
+                    <div class="subject">{{ page.title }}</div>
+                    <span class="bar"></span>
+                    <div class="desc">{{ page.description }}</div>
+                </div>
+                <div class="content">{{ content }}</div>
+            </article>
+            {% if page.comments %}
+            <div class="comment">
+                <script src="https://utteranc.es/client.js" repo="africalib/comments" issue-term="pathname"
+                    theme="github-light" crossorigin="anonymous" async>
+                    </script>
+                <div class="error d-none">
+                    <div>댓글 로딩에 실패했습니다.</div>
+                    <a href="#" onclick="location.reload()">다시 시도</a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-lg-3 right">
+            <div class="content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div>index</div>
+                                <span></span>
+                            </th>
+                            <th class="page">
+                                <div>page</div>
+                                <span></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in site.posts reversed %}
+                        {% if post.categories == page.categories %}
+                        <tr>
+                            <td>
+                                <a href="{{ site.baseurl }}{{ post.url }}"
+                                    class="{% if page.url == post.url %} active{% endif %}">{{ post.title }}</a>
+                            </td>
+                            <td class="page">
+                                <a href="{{ site.baseurl }}{{ post.url }}">{{ forloop.index }}</a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <a class="btn btn-dark btn-block" href="{{ coverUrl }}">커버 페이지</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ site.baseurl }}/assets/js/post.js"></script>

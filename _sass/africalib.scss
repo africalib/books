@@ -1,0 +1,391 @@
+body {
+    font-family: initial;
+
+    img {
+        max-width: 100%;
+    }
+
+    a, .btn {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        border-radius: 0;
+    }
+}
+
+header {
+    nav {
+        .navbar-brand {
+            font-size: 1rem;
+        }
+
+        ul.navbar-nav {
+            > li.nav-item {
+                > a.nav-link {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        button.navbar-toggler {
+            border-radius: 0;
+            padding: 0.3rem 0.5rem;
+            line-height: 0;
+            outline: 0;
+
+            .navbar-toggler-icon {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+
+    .home {
+        .row {
+            padding: 2rem 0;
+
+            .img {
+                margin-bottom: 1.2rem;
+            }
+
+            .txt {
+                line-height: 1.7;
+                font-size: 0.9rem;
+
+                .title {
+                    font-weight: bold;
+                }
+
+                .description {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .book {
+        border: 0.1rem solid #aaa;
+        border-left: 1rem solid #343a40;
+        position: relative;
+        padding-top: 1rem;
+
+        > .top {
+            position: absolute;
+            left: 0;
+            top: 1.3rem;
+            padding-left: 1.25rem;
+            padding-right: 1rem;
+            width: 100%;
+
+            a, span {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+
+        > .line {
+            height: 3rem;
+            border-bottom: 0.1rem solid #aaa;
+        }
+
+        > .row {
+            > .left {
+                > .cover {
+                    padding: 2rem 3rem 2rem 5rem;
+                    margin: 2rem 3rem 3rem 2rem;
+
+                    > .title {
+                        font-weight: bold;
+                        line-height: 1;
+                        font-size: 3rem;
+                    }
+
+                    > .dest {
+                        margin-top: 1.2rem;
+                        font-size: 1.5rem;
+                    }
+
+                    > .date {
+                        margin-top: 2.5rem;
+
+                        .side {
+                            margin-top: 2.5rem;
+
+                            .badge {
+                                font-size: 0.8rem;
+                            }
+
+                            .value {
+                                font-size: 1rem;
+                                margin-top: 0.25rem;
+                            }
+                        }
+                    }
+
+                    > .image {
+                        text-align: center;
+                        margin-top: 5rem;
+                        padding: 0 2.5rem;
+                    }
+
+                    > .author {
+                        margin: 1rem 0 5rem 0;
+                        font-size: 1.2rem;
+                        color: #3a3a3a;
+                    }
+                }
+
+                article {
+                    padding: 2rem;
+
+                    > .title {
+                        padding-bottom: 1rem;
+                        margin-bottom: 2rem;
+                        text-align: center;
+                        margin-top: 1.5rem;
+
+                        > .subject {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                        }
+
+                        > .bar {
+                            display: inline-block;
+                            width: 4.2rem;
+                            height: 0.1rem;
+                            background: #aaa;
+                            margin: 1rem 0;
+                        }
+
+                        > .dest {
+                            margin-top: 0.1rem;
+                        }
+                    }
+
+                    > .content {
+                        line-height: 1.8;
+
+                        .badge {
+                            font-size: 0.9rem;
+                        }
+
+                        .highlighter-rouge {
+                            margin-top: 1rem;
+
+                            > .highlight {
+                                padding: 1rem;
+
+                                pre {
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        ol {
+                            li {
+                                ul {
+                                    padding-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .comment {
+                    border-top: 0.1rem solid #ddd;
+                    padding-top: 1rem;
+                    margin: 1rem 2rem;
+
+                    > .utterances {
+                        min-height: 17.6rem;
+                        background-image: url(../img/loading.svg);
+                        background-position: 50% 50%;
+                        background-repeat: no-repeat;
+
+                        &[style] {
+                            background: none;
+                        }
+                    }
+
+                    > .error {
+                        text-align: center;
+                        padding: 2rem 0;
+
+                        > a {
+                            display: inline-block;
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            > .right {
+                margin-top: 1.5rem;
+
+                > .content {
+                    padding: 1.25rem 1.5rem;
+
+                    > table {
+                        tr {
+                            th, td {
+                                border: 0;
+                            }
+
+                            th {
+                                border: 0;
+                                padding-bottom: 0.5rem;
+
+                                span {
+                                    display: inline-block;
+                                    width: 1.5rem;
+                                    height: 0.1rem;
+                                    border-bottom: 0.1rem solid #aaa;
+                                }
+
+                                &.page {
+                                    width: 5rem;
+                                }
+                            }
+
+                            td {
+                                padding: 0;
+
+                                a {
+                                    color: inherit;
+                                    padding: 0.25rem 0.75rem;
+                                    display: block;
+
+                                    &.active {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    > .actions {
+                        text-align: center;
+                        margin-top: 2rem;
+
+                        a {
+                            height: 2.37rem;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    border-top: 0.1rem solid #ddd;
+
+    a {
+        color: inherit;
+    }
+}
+
+@media (min-width: 991px) {
+    main {
+        .home .row .txt {
+            padding-left: 2rem;
+        }
+
+        .book > .row {
+            > .left {
+                padding-right: 0;
+                border-right: 0.1rem solid #aaa;
+            }
+
+            > .right {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    header nav ul.navbar-nav > li.nav-item > a.nav-link {
+        padding-left: 0;
+
+        &:before {
+            content: '- ';
+        }
+    }
+
+    main {
+        .home {
+            .img {
+                padding: 1rem 4rem;
+            }
+
+            .txt {
+                padding: 2rem;
+            }
+        }
+
+        .book {
+            > .line {
+                &:after {
+                    content: none;
+                }
+            }
+
+            > .row {
+                > .left {
+                    > .cover {
+                        padding: 0 0 2rem 1rem;
+                        margin-top: 3rem;
+                        margin-bottom: 1rem;
+
+                        > .image {
+                            margin-top: 3rem;
+                            margin-bottom: 0.75rem;
+
+                            img {
+                                width: 20rem;
+                            }
+                        }
+
+                        > .date {
+                            margin-top: 0;
+
+                            .side {
+                                text-align: left !important;
+                            }
+                        }
+                    }
+                }
+
+                > .right {
+                    margin-top: 0;
+
+                    > .content {
+                        border-top: 0.1rem solid #ddd;
+                        padding: 2rem 0rem;
+                        margin: 0 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

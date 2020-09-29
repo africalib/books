@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+{% assign book = page.book | default: page.title %}
+{% assign posts = site.categories[book] %}
+{% assign lastIdx = posts.size | minus: 1 %}
+
+<div class="book">
+    <div class="top">
+        <span>{{ page.group }}</span>
+    </div>
+    <div class="line"></div>
+    <div class="row">
+        <div class="col-lg-9 left">
+            <div class="cover">
+                <div class="title">{{ page.title }}</div>
+                <div class="dest">{{ page.description }}</div>
+                <div class="image">
+                    <img src="{{ site.baseurl }}/assets/img/logo.book.svg" />
+                </div>
+                {% if posts.size > 0 %}
+                <div class="date">
+                    <div class="row">
+                        <div class="side col-md-6">
+                            <span class="badge badge-dark">First Post</span>
+                            <div class="value">{{ posts[lastIdx].date | date: "%Y년 %m월 %d일" }}</div>
+                        </div>
+                        <div class="side col-md-6 text-right">
+                            <span class="badge badge-dark">Last Post</span>
+                            <div class="value">{{ posts[0].date | date: "%Y년 %m월 %d일" }}</div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-3 right">
+            <div class="content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div>index</div>
+                                <span></span>
+                            </th>
+                            <th class="page">
+                                <div>page</div>
+                                <span></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in posts reversed %}
+                        <tr>
+                            <td>
+                                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                            </td>
+                            <td class="page">
+                                <a href="{{ site.baseurl }}{{ post.url }}">{{ forloop.index }}</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="actions">
+                    <a class="btn btn-dark btn-block" href="{{ site.baseurl }}{{ page.url }}/first">시작하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
