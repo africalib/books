@@ -23,7 +23,7 @@ layout: default
                 <div class="title">
                     <div class="subject">{{ page.title }}</div>
                     <span class="bar"></span>
-                    <div class="desc">{{ page.description }}</div>
+                    <div class="desc" title="{{ page.sayer }}">{{ page.saying }}</div>
                 </div>
                 <div class="content">{{ content }}</div>
             </article>
@@ -44,12 +44,8 @@ layout: default
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>
-                                <div>index</div>
-                                <span></span>
-                            </th>
-                            <th class="page">
-                                <div>page</div>
+                            <th colspan="2">
+                                <div>chapters</div>
                                 <span></span>
                             </th>
                         </tr>
@@ -62,9 +58,7 @@ layout: default
                                 <a href="{{ site.baseurl }}{{ post.url }}"
                                     class="{% if page.url == post.url %} active{% endif %}">{{ post.title }}</a>
                             </td>
-                            <td class="page">
-                                <a href="{{ site.baseurl }}{{ post.url }}">{{ forloop.index }}</a>
-                            </td>
+                            <td class="page">{{ forloop.index }}</td>
                         </tr>
                         {% endif %}
                         {% endfor %}

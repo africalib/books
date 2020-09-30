@@ -8,7 +8,7 @@ layout: default
 
 <div class="book">
     <div class="top">
-        <span>{{ page.group }}</span>
+        <span>커버 페이지</span>
     </div>
     <div class="line"></div>
     <div class="row">
@@ -40,12 +40,8 @@ layout: default
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>
-                                <div>index</div>
-                                <span></span>
-                            </th>
-                            <th class="page">
-                                <div>page</div>
+                            <th colspan="2">
+                                <div>chapters</div>
                                 <span></span>
                             </th>
                         </tr>
@@ -56,9 +52,7 @@ layout: default
                             <td>
                                 <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                             </td>
-                            <td class="page">
-                                <a href="{{ site.baseurl }}{{ post.url }}">{{ forloop.index }}</a>
-                            </td>
+                            <td class="page">{{ forloop.index }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

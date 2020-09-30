@@ -53,23 +53,24 @@ main {
     font-size: 0.9rem;
 
     .home {
-        .row {
-            padding: 2rem 0;
+        > .row {
+            > .left {
+                > article {
+                    > .content {
+                        .img {
+                            margin: 2rem 0 4rem 0;
+                            text-align: center;
 
-            .img {
-                margin-bottom: 1.2rem;
-            }
+                            img {
+                                max-width: 300px;
+                            }
+                        }
 
-            .txt {
-                line-height: 1.7;
-                font-size: 0.9rem;
-
-                .title {
-                    font-weight: bold;
-                }
-
-                .description {
-                    margin-top: 0.5rem;
+                        .txt {
+                            line-height: 1.7;
+                            font-size: 0.9rem;
+                        }
+                    }
                 }
             }
         }
@@ -115,12 +116,12 @@ main {
                     > .title {
                         font-weight: bold;
                         line-height: 1;
-                        font-size: 3rem;
+                        font-size: 2.1rem;
                     }
 
                     > .dest {
                         margin-top: 1.2rem;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                     }
 
                     > .date {
@@ -144,6 +145,10 @@ main {
                         text-align: center;
                         margin-top: 5rem;
                         padding: 0 2.5rem;
+
+                        img {
+                            width: 300px;
+                        }
                     }
 
                     > .author {
@@ -310,8 +315,12 @@ footer {
 
 @media (min-width: 991px) {
     main {
-        .home .row .txt {
-            padding-left: 2rem;
+        .home {
+            > .row {
+                .left {
+                    border-right: 0.1rem solid #aaa;
+                }
+            }
         }
 
         .book > .row {
@@ -337,16 +346,6 @@ footer {
     }
 
     main {
-        .home {
-            .img {
-                padding: 1rem 4rem;
-            }
-
-            .txt {
-                padding: 2rem;
-            }
-        }
-
         .book {
             > .line {
                 &:after {
