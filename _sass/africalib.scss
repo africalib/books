@@ -62,7 +62,7 @@ main {
                             text-align: center;
 
                             img {
-                                max-width: 300px;
+                                width: 200px;
                             }
                         }
 
@@ -147,7 +147,7 @@ main {
                         padding: 0 2.5rem;
 
                         img {
-                            width: 300px;
+                            width: 200px;
                         }
                     }
 
@@ -346,6 +346,20 @@ footer {
     }
 
     main {
+        .home {
+            > .row {
+                > .left {
+                    > article {
+                        > .content {
+                            .img {
+                                margin: 1rem 0 2.75rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .book {
             > .line {
                 &:after {
