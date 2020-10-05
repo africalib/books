@@ -16,6 +16,26 @@ body {
     .badge {
         border-radius: 0;
     }
+
+    .w100 {
+        width: 100px;
+    }
+
+    .w200 {
+        width: 200px;
+    }
+
+    .w300 {
+        width: 300px;
+    }
+
+    .w400 {
+        width: 400px;
+    }
+
+    .w500 {
+        width: 500px;
+    }
 }
 
 header {
@@ -193,7 +213,7 @@ main {
                         }
 
                         .highlighter-rouge {
-                            margin: 1rem 0 2rem 0;
+                            margin: 1rem 0;
 
                             > .highlight {
                                 padding: 1rem;
@@ -216,7 +236,6 @@ main {
                         p {
                             img {
                                 display: block;
-                                width: 300px;
                                 margin: 0 auto;
                             }
                         }
