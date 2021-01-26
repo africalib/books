@@ -51,7 +51,8 @@ layout: default
                         </tr>
                     </thead>
                     <tbody>
-                        {% for post in site.posts reversed %}
+                        {% assign posts = site.posts | sort:"order" %}
+                        {% for post in posts %}
                         {% if post.categories == page.categories %}
                         <tr>
                             <td>

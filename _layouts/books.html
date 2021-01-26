@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign book = page.book | default: page.title %}
-{% assign posts = site.categories[book] %}
+{% assign posts = site.categories[book] | sort:"order" %}
 {% assign lastIdx = posts.size | minus: 1 %}
 
 <div class="book">
@@ -47,7 +47,7 @@ layout: default
                         </tr>
                     </thead>
                     <tbody>
-                        {% for post in posts reversed %}
+                        {% for post in posts %}
                         <tr>
                             <td>
                                 <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -58,7 +58,7 @@ layout: default
                     </tbody>
                 </table>
                 <div class="actions">
-                    <a class="btn btn-dark btn-block" href="{{ site.baseurl }}{{ page.url }}/first">시작하기</a>
+                    <a class="btn btn-dark btn-block" href="{{ site.baseurl }}{{ page.url }}intro">시작하기</a>
                 </div>
             </div>
         </div>
