@@ -169,6 +169,8 @@ main {
                             .value {
                                 font-size: 1rem;
                                 margin-top: 0.25rem;
+                                display: inline-block;
+                                margin-left: 0.25rem;
                             }
                         }
                     }
@@ -176,10 +178,9 @@ main {
                     > .image {
                         text-align: center;
                         margin-top: 5rem;
-                        padding: 0 2.5rem;
 
                         img {
-                            width: 200px;
+                            filter: saturate(0.5);
                         }
                     }
 
