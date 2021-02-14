@@ -59,8 +59,8 @@ header {
         ul.navbar-nav {
             > li.nav-item {
                 > a.nav-link {
-                    padding-right: 1rem;
-                    padding-left: 1rem;
+                    padding-right: 0;
+                    padding-left: 2rem;
                     font-size: 0.9rem;
                 }
             }
@@ -157,10 +157,10 @@ main {
                     }
 
                     > .date {
-                        margin-top: 2.5rem;
+                        margin-top: 3.5rem;
 
                         .side {
-                            margin-top: 2.5rem;
+                            margin-top: 1rem;
 
                             .badge {
                                 font-size: 0.8rem;
@@ -211,10 +211,6 @@ main {
                             height: 0.1rem;
                             background: #aaa;
                             margin: 1rem 0;
-                        }
-
-                        > .dest {
-                            margin-top: 0.1rem;
                         }
                     }
 
@@ -418,7 +414,7 @@ footer {
 
                         > .image {
                             margin-top: 3rem;
-                            margin-bottom: 0.75rem;
+                            margin-bottom: 1rem;
 
                             img {
                                 width: 20rem;
