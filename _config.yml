@@ -17,3 +17,10 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+    highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: false

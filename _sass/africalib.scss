@@ -9,6 +9,15 @@ body {
         max-width: 100%;
     }
 
+    pre {
+        font-size: 100%;
+        color: inherit;
+
+        code {
+            font-size: 12px;
+        }
+    }
+
     a, .btn {
         font-size: 0.9rem;
     }
