@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% assign posts = site.posts | sort:"order" %}
 <div class="post book">
     <div class="top">
         {% assign coverUrl = "" %}
@@ -22,8 +23,8 @@ layout: default
             <article>
                 <div class="title">
                     <div class="subject">{{ page.title }}</div>
-                    <span class="bar"></span>
                     <div class="desc">{{ page.summary }}</div>
+                    <div class="date">{{ page.date | date: "%Y-%m-%d" }}</div>
                 </div>
                 <div class="content">{{ content }}</div>
             </article>
@@ -45,13 +46,12 @@ layout: default
                     <thead>
                         <tr>
                             <th colspan="2">
-                                <div>chapters</div>
+                                <div>Chapters</div>
                                 <span></span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% assign posts = site.posts | sort:"order" %}
                         {% for post in posts %}
                         {% if post.categories == page.categories %}
                         <tr>

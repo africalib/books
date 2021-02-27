@@ -200,26 +200,28 @@ main {
                     }
                 }
 
-                article {
-                    padding: 2rem;
+                > article {
+                    padding: 3rem 2rem 2rem 2rem;
 
                     > .title {
-                        padding-bottom: 1rem;
                         margin-bottom: 2rem;
-                        text-align: center;
-                        margin-top: 1.5rem;
+                        position: relative;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 2.5rem;
 
                         > .subject {
                             font-size: 1.5rem;
                             font-weight: bold;
                         }
 
-                        > .bar {
+                        .desc {
+                            margin-top: 0.7rem;
                             display: inline-block;
-                            width: 4.2rem;
-                            height: 0.1rem;
-                            background: #aaa;
-                            margin: 1rem 0;
+                        }
+
+                        .date {
+                            margin-top: 0.7rem;
+                            float: right;
                         }
                     }
 
@@ -360,7 +362,7 @@ footer {
     }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
     main {
         .home {
             > .row {
@@ -378,6 +380,24 @@ footer {
 
             > .right {
                 padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    main .book > .row > .left {
+        > article {
+            > .title {
+                .subject {
+                    display: inline-block;
+                }
+
+                .date {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
             }
         }
     }
